@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-*-rb(h=3z0!(yd5)z3kg02-@+e*-rpe50khgr)v1c95yel92mx
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-sean127-replay-lxecfuy59rw.ws-eu104.gitpod.io'
+    '8000-sean127-replay-2y08nv4l9py.ws-eu104.gitpod.io'
     ]
 
 
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -60,7 +62,10 @@ ROOT_URLCONF = 'replay.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
