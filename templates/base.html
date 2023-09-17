@@ -36,7 +36,51 @@
 </head>
 
 <body>
-    <header class="container-fluid fixed-top"></header>
+    <header class="container-fluid fixed-top background-colour">
+        <div class="row">
+            <div class="col-12 col-lg-1 text-center text-lg-left">
+                <a class="navbar-brand main-logo-link" href="{% url 'home' %}">
+                    <img src="/media/images/logo.jpg" width="50" height="30" alt="RePlay logo">
+                </a>
+            </div>
+            <div class="col-12 col-lg-1 text-center text-lg-left nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Games
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">PS3 Games</a>
+                    <a class="dropdown-item" href="#">Xbox 360 Games</a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-1 text-center text-lg-left nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Consoles
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">PS3</a>
+                    <a class="dropdown-item" href="#">Xbox 360</a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-1 text-center text-lg-left nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Accessories
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">PS3 Accessories</a>
+                    <a class="dropdown-item" href="#">Xbox 360 Accessories</a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-1 text-center text-lg-right nav-item dropdown align-right">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Accessories
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">PS3 Accessories</a>
+                    <a class="dropdown-item" href="#">Xbox 360 Accessories</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
     {% block page_header %}
     {% endblock %}
