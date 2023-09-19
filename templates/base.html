@@ -39,47 +39,58 @@
 </head>
 
 <body>
-    <header class="container-fluid fixed-top background-colour">
+    <header class="container-fluid bg-purple">
         <div class="row">
-            <div class="col-12 col-lg-1 text-center text-lg-left">
-                <a class="navbar-brand main-logo-link" href="{% url 'home' %}">
-                    <img src="/media/images/logo.jpg" width="50" height="30" alt="RePlay logo">
-                </a>
-            </div>
-            <div class="col-12 col-lg-1 text-center text-lg-left nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                    Games
-                </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">PS3 Games</a>
-                    <a class="dropdown-item" href="#">Xbox 360 Games</a>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-white">
+                <div class="header-left">
+                    <div class="logo">
+                        <a class="navbar-brand main-logo-link" href="{% url 'home' %}">
+                            <img src="/media/images/logo-no-background.png" width="80" height="50" alt="RePlay logo">
+                        </a>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn bg-white text-purple" type="button" data-toggle="dropdown"
+                            aria-expanded="false">
+                            Games
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">PS3 Games</a>
+                            <a class="dropdown-item" href="#">Xbox 360 Games</a>
+                            <a class="dropdown-item" href="#">All Games</a>
+                        </div>
+                    </div>
+                    <div class="dropdown text-purple">
+                        <button class="btn bg-white text-purple" type="button" data-toggle="dropdown"
+                            aria-expanded="false">
+                            Consoles
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">PS3 Consoles</a>
+                            <a class="dropdown-item" href="#">Xbox 360 Consoles</a>
+                            <a class="dropdown-item" href="#">All Consoles</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn bg-white text-purple" type="button" data-toggle="dropdown"
+                            aria-expanded="false">
+                            Accessories
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">PS3 Accessories</a>
+                            <a class="dropdown-item" href="#">Xbox 360 Accessories</a>
+                            <a class="dropdown-item" href="#">All Accessories</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-1 text-center text-lg-left nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                    Consoles
-                </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">PS3</a>
-                    <a class="dropdown-item" href="#">Xbox 360</a>
-                </div>
-            </div>
-            <div class="col-12 col-lg-1 text-center text-lg-left nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                    Accessories
-                </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">PS3 Accessories</a>
-                    <a class="dropdown-item" href="#">Xbox 360 Accessories</a>
-                </div>
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-white text-center">
                 <form method="GET" action="">
-                    <div class="input-group w-100">
+                    <div class="input-group w-100 justify-content-center">
                         <input class="form-control border border-black rounded-0" type="text" name="q"
                             placeholder="Search our site">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                            <button class="form-control btn btn-black border border-black rounded-0 text-white"
+                                type="submit">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
@@ -88,45 +99,45 @@
                     </div>
                 </form>
             </div>
-            <div class="col-12 col-lg-1 text-lg-right nav-item justify-content-end ">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                    <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                            {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                            <a href="" class="dropdown-item">Product Management</a>
-                            {% endif %}
-                            <a href="" class="dropdown-item">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                            {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                            {% endif %}
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-white text-center">
+                <div class="header-right">
+                    <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link text-white"
+                        href="">
+                        <div class="text-center">
+                            <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                            <p class="my-0">
+                                {% if grand_total %}
+                                ${{ grand_total|floatformat:2 }}
+                                {% else %}
+                                €0.00
+                                {% endif %}
+                            </p>
                         </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-12 col-lg-1 text-center text-lg-right nav-item justify-content-end">
-                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                    href="">
-                    <div class="text-center">
-                        <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                        <p class="my-0">
-                            {% if grand_total %}
-                            ${{ grand_total|floatformat:2 }}
-                            {% else %}
-                            €0.00
-                            {% endif %}
-                        </p>
-                    </div>
-                </a>
+                    </a>
+                    <ul class="list-inline list-unstyled text-center text-lg-right my-0 ">
+                        <li class="list-inline-item dropdown">
+                            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <div><i class="fas fa-user fa-lg text-white"></i></div>
+                                    <p class="my-0 text-white">My Account</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0 text-white" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                <a href="" class="dropdown-item">Product Management</a>
+                                {% endif %}
+                                <a href="" class="dropdown-item">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                {% endif %}
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>

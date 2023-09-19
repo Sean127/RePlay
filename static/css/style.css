@@ -1,19 +1,53 @@
 html {
     height: 100%;
+    font-family: 'Nunito', sans-serif;
+
 }
 
 body {
     background: url('/media/images/Background.jpg') no-repeat center fixed;
     background-size: cover;
-    font-family: 'Nunito', sans-serif;
 }
 
 /* From Bulma */
-
 .icon {
     align-items: center;
     display: inline-flex;
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
+}
+
+.bg-purple{
+    background-color: #7c24c4;
+}
+
+.bg-white{
+    background-color:white;
+}
+
+.text-purple{
+    color: #7c24c4;
+}
+
+.text-white{
+    color: white;
+}
+.header-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-right{
+    display: flex;
+    flex-direction:row-reverse
+}
+
+.btn-padding{
+    padding-left: 5px;
+}
+
+.card-style{
+    width: 20rem;
 }
