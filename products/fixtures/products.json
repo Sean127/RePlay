@@ -1,0 +1,66 @@
+[{
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "gta_v_ps3",
+            "name": "Grand Theft Auto V",
+            "rating": 4.8,
+            "description": "Developed by series creator Rockstar North, Grand Theft Auto V heads to the city of Los Santos and surrounding hills, countryside and beaches in the largest and most ambitious game Rockstar has yet created. A bold new direction in open-world freedom, storytelling, mission-based gameplay and online multiplayer, Grand Theft Auto V focuses on the pursuit of the almighty dollar in a re-imagined, present day Southern California",
+            "price": 5.99,
+            "category": 1,
+            "image": "GTAV_PS3.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "bo1_ps3",
+            "name": "Call Of Duty: Black Ops",
+            "rating": 4.8,
+            "description": "Treyarch is telling the story of the Cold War in Call of Duty: Black Ops, but from a very different point of view. You get to play as an elite soldier - the best of the best - as you tackle these questionable and top-secret missions. Sabotage and stealth are your weapons here as you fight enemies in the Soviet Union, Vietnam and many other warzones that were present during the time of the Cold War.",
+            "price": 4.99,
+            "category": 1,
+            "image": "BO1_PS3.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "mw2_ps3",
+            "name": "Call Of Duty: Modern Warfare 2",
+            "rating": 4.7,
+            "description": "Modern Warfare 2, the sequel to the Multiplayer Game of the Year winner 'Call Of Duty 4: Modern Warfare', continues the gripping and heart-racing saga with an unprecedented level of action as players face off against a new threat dedicated to bringing the world to the brink of collapse",
+            "price": 4.99,
+            "category": 1,
+            "image": "MW2_PS3.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "bo2_ps3",
+            "name": "Call Of Duty: Black Ops II",
+            "rating": 4.7,
+            "description": "The most groundbreaking and visceral Call of Duty experience ever. Set in the year 2025, Call of Duty: Black Ops II propels players into global conflict featuring advanced weaponry, robotics, and drone warfare in a new Cold War scenario whose seeds are being sown in today's headlines.",
+            "price": 10.99,
+            "category": 1,
+            "image": "BO2_PS3.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "bo2_ps3",
+            "name": "Call Of Duty: Black Ops II",
+            "rating": 4.7,
+            "description": "The most groundbreaking and visceral Call of Duty experience ever. Set in the year 2025, Call of Duty: Black Ops II propels players into global conflict featuring advanced weaponry, robotics, and drone warfare in a new Cold War scenario whose seeds are being sown in today's headlines.",
+            "price": 10.99,
+            "category": 1,
+            "image": "BO2_PS3.jpg"
+        }
+    }
+]
