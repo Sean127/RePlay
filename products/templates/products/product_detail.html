@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 offset-2">
+            <div class="image-container my-4">
+                {% if product.image %}
+                <a href="{{ product.image.url }}" target="_blank">
+                    <img src="{{ product.image.url }}" class="card-img-top image-style" alt="{{ product.name }}">
+                </a>
+                {% else %}
+                <a href="">
+                    <img src="{{ MEDIA_URL}}no_image.jpg" class="card-img-top" alt="{{ product.name }}">
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-details-container md-4">
+                <h4>{{product.name}}</h4>
+                <p class="text-left font-weight-bold">€{{product.price}}</p>
+                {% if product.rating %}
+                <small class="text-muted"><i class="fa-sharp fa-solid fa-star"></i>{{product.rating}}/5
+                    ({{product.no_of_reviews}}
+                    Reviews)</small>
+                {% else %}
+                <small class="text-muted">No Reviews</small>
+                {% endif %}
+                <p>{{product.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
