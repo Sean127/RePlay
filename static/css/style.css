@@ -18,48 +18,49 @@ body {
     width: 1.5rem;
 }
 
-.bg-purple{
+.bg-purple {
     background-color: #7c24c4;
 }
 
-.bg-white{
-    background-color:white;
+.bg-white {
+    background-color: white;
 }
 
-.button-border{
-    border:2px solid #7c24c4;
+.button-border {
+    border: 2px solid #7c24c4;
 }
 
-.text-purple{
+.text-purple {
     color: #7c24c4;
 }
 
-.text-white{
+.text-white {
     color: white;
 }
-.header-left{
+
+.header-left {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.header-right{
+.header-right {
     display: flex;
-    flex-direction:row-reverse
+    flex-direction: row-reverse
 }
 
-.btn-padding{
+.btn-padding {
     padding-left: 5px;
 }
 
-.card-style{
+.card-style {
     width: 20rem;
     height: 30rem;
     margin: auto;
     margin-top: 10%;
 }
 
-.overlay{
+.overlay {
     height: 100%;
     width: 100%;
     left: 0;
@@ -69,6 +70,17 @@ body {
     background: white;
 }
 
-.image-style{
+.image-style {
     height: 20rem;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    align-items: center;
+}
+
