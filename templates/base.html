@@ -54,9 +54,9 @@
                             Games
                         </button>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">PS3 Games</a>
-                            <a class="dropdown-item" href="#">Xbox 360 Games</a>
-                            <a class="dropdown-item" href="#">All Games</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=ps3_games">PS3 Games</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=xbox_360_games">Xbox 360 Games</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=ps3_games,xbox_360_games">All Games</a>
                         </div>
                     </div>
                     <div class="dropdown text-purple">
@@ -65,9 +65,9 @@
                             Consoles
                         </button>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">PS3 Consoles</a>
-                            <a class="dropdown-item" href="#">Xbox 360 Consoles</a>
-                            <a class="dropdown-item" href="#">All Consoles</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=ps3_consoles">PS3 Consoles</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=xbox_360_consoles">Xbox 360 Consoles</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=ps3_consoles,xbox_360_consoles">All Consoles</a>
                         </div>
                     </div>
                     <div class="dropdown">
@@ -76,9 +76,9 @@
                             Accessories
                         </button>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">PS3 Accessories</a>
-                            <a class="dropdown-item" href="#">Xbox 360 Accessories</a>
-                            <a class="dropdown-item" href="#">All Accessories</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=ps3_accessories">PS3 Accessories</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=xbox_360_accessories">Xbox 360 Accessories</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=ps3_accessories,xbox_360_accessories">All Accessories</a>
                         </div>
                     </div>
                 </div>
