@@ -10,8 +10,15 @@ def all_products(request):
     products = Product.objects.all()
     query = None
     category = None
+    sortkey = None
 
     if request.GET:
+
+        if 'sort_by' in request.GET:
+            sortkey = request.GET('sort_by')
+            if sortkey == 'alpha_ascend':
+                products = Product.objects.all.order_by('name').values()
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)

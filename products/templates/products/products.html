@@ -70,17 +70,18 @@
         </div>
         <div class="col-2">
             <h4 class="text-center">Filter Options</h4>
-            <form action="GET">
+            <form action="{% url 'products' %}">
                 <div class="form-group">
                     <label for="sort_by">Sort By:</label>
                     <select class="form-control" id="sort_by">
-                        <option>Alphabetical (Ascending)</option>
-                        <option>Alphabetical (Decending)</option>
-                        <option>Price (Ascending)</option>
-                        <option>price (Decending)</option>
-                        <option>Average Rating</option>
+                        <option value="alpha_ascend">Alphabetical (Ascending)</option>
+                        <option value="alpha_decend">Alphabetical (Decending)</option>
+                        <option value="price_ascend">Price (Ascending)</option>
+                        <option value="price_decend">price (Decending)</option>
+                        <option value="average-rating">Average Rating</option>
                     </select>
                 </div>
+                <button type="submit" class="bg-purple text-white">Submit</button>
             </form>
         </div>
     </div>
