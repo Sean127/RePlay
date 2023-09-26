@@ -30,6 +30,10 @@ body {
     border: 2px solid #7c24c4;
 }
 
+.ks-button{
+    
+}
+
 .text-purple {
     color: #7c24c4;
 }
@@ -53,6 +57,10 @@ body {
     padding-left: 5px;
 }
 
+.button{
+    border-radius: 4px;
+}
+
 .card-style {
     width: 20rem;
     height: 30rem;
@@ -71,11 +79,16 @@ body {
 }
 
 .image-style {
-    height: 20rem;
+    height: 25rem;
+    margin-right: 1rem;
+}
+
+.top-padding{
+    padding-top: 1.5rem;
 }
 
 .footer {
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
