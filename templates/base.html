@@ -55,8 +55,10 @@
                         </button>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="{% url 'products' %}?category=ps3_games">PS3 Games</a>
-                            <a class="dropdown-item" href="{% url 'products' %}?category=xbox_360_games">Xbox 360 Games</a>
-                            <a class="dropdown-item" href="{% url 'products' %}?category=ps3_games,xbox_360_games">All Games</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=xbox_360_games">Xbox 360
+                                Games</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=ps3_games,xbox_360_games">All
+                                Games</a>
                         </div>
                     </div>
                     <div class="dropdown text-purple">
@@ -66,8 +68,10 @@
                         </button>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="{% url 'products' %}?category=ps3_consoles">PS3 Consoles</a>
-                            <a class="dropdown-item" href="{% url 'products' %}?category=xbox_360_consoles">Xbox 360 Consoles</a>
-                            <a class="dropdown-item" href="{% url 'products' %}?category=ps3_consoles,xbox_360_consoles">All Consoles</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=xbox_360_consoles">Xbox 360
+                                Consoles</a>
+                            <a class="dropdown-item"
+                                href="{% url 'products' %}?category=ps3_consoles,xbox_360_consoles">All Consoles</a>
                         </div>
                     </div>
                     <div class="dropdown">
@@ -76,9 +80,13 @@
                             Accessories
                         </button>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="{% url 'products' %}?category=ps3_accessories">PS3 Accessories</a>
-                            <a class="dropdown-item" href="{% url 'products' %}?category=xbox_360_accessories">Xbox 360 Accessories</a>
-                            <a class="dropdown-item" href="{% url 'products' %}?category=ps3_accessories,xbox_360_accessories">All Accessories</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=ps3_accessories">PS3
+                                Accessories</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=xbox_360_accessories">Xbox 360
+                                Accessories</a>
+                            <a class="dropdown-item"
+                                href="{% url 'products' %}?category=ps3_accessories,xbox_360_accessories">All
+                                Accessories</a>
                         </div>
                     </div>
                 </div>
@@ -102,7 +110,7 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-white text-center">
                 <div class="header-right">
                     <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link text-white"
-                        href="">
+                        href="{% url 'view_bag' %}">
                         <div class="text-center">
                             <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                             <p class="my-0">
@@ -148,16 +156,17 @@
     {% block content %}
     {% endblock %}
 
-    <footer class="footer mt-auto py-3 bg-purple">
+    <div class="text-white py-3 bg-purple footer">
         <div class="container">
             <div class="row">
                 <div class="col-12 md-6">
                     <h3>Follow Us!</h3>
-                    <p>Be sure to follow us on <a href="www.facebook.com" target="_blank">Facebook</a> to keep up to date on new deals on promotions!</p>
+                    <p>Be sure to follow us on <a href="www.facebook.com" target="_blank">Facebook</a> to keep up to
+                        date on new deals on promotions!</p>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
 
     {% block postloadjs %}
     {% endblock %}
