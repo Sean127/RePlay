@@ -70,15 +70,15 @@
         </div>
         <div class="col-2">
             <h4 class="text-center">Filter Options</h4>
-            <form action="{% url 'products' %}">
+            <form method="GET">
                 <div class="form-group">
                     <label for="sort_by">Sort By:</label>
                     <select class="form-control" id="sort_by">
                         <option value="alpha_ascend">Alphabetical (Ascending)</option>
-                        <option value="alpha_decend">Alphabetical (Decending)</option>
+                        <option value="alpha_descend">Alphabetical (Decending)</option>
                         <option value="price_ascend">Price (Ascending)</option>
-                        <option value="price_decend">price (Decending)</option>
-                        <option value="average-rating">Average Rating</option>
+                        <option value="price_descend">Price (Decending)</option>
+                        <option value="rating-ascend">Average Rating</option>
                     </select>
                 </div>
                 <button type="submit" class="bg-purple text-white">Submit</button>
@@ -87,4 +87,29 @@
     </div>
 </div>
 </div>
+{% endblock %}
+{% block postloads %}
+{{ block.super }}
+<script type="text/javascript">
+    $('sort_by').change(function () {
+        var selector = $(this);
+        var currentUrl = new URL(window.location);
+
+        var selectedVal = selector.val()
+        if (selectedVal != "reset") {
+            var sort = selectedVal.split("_")[0];
+            var direction = selectedVal.split("_")[1];
+
+            currentUrl.searchParams.set("sort", sort);
+            currentUrl.searchParams.set("direction", direction);
+
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
+
+            window.location.replace(currentUrl);
+        }
+    })
+</script>
 {% endblock %}

@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Product
 from django.db.models import Q
 from django.contrib import messages
+from django.db.models.functions import Lower
 
 
 def all_products(request):
@@ -10,14 +11,20 @@ def all_products(request):
     products = Product.objects.all()
     query = None
     category = None
-    sortkey = None
+    sort = None
+    direction = None
 
     if request.GET:
-
-        if 'sort_by' in request.GET:
-            sortkey = request.GET('sort_by')
-            if sortkey == 'alpha_ascend':
-                products = Product.objects.all.order_by('name').values()
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                products = products.annotate(lower_name=Lower('name'))
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'descend':
+                    sortkey = f'-{sortkey}'
+            products = products.order_by(sortkey)
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
