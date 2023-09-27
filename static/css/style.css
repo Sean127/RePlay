@@ -26,6 +26,10 @@ body {
     background-color: white;
 }
 
+.text-black{
+    color: #000000;
+}
+
 .button-border {
     border: 2px solid #7c24c4;
 }
@@ -124,4 +128,10 @@ body {
 
 .toast-capper{
     height: 2px;
+}
+
+.bag-notification-wrapper{
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y:auto ;
 }

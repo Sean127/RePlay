@@ -7,6 +7,37 @@
         </button>
     </div>
     <div class="toast-body">
-        {{ message }}
+        <div class="row">
+            <div class="col">
+                {{ message }}
+                <hr class="mt-1 mb-3">
+            </div>
+        </div>
+        {% if grand_total %}
+        <p><strong>Your Bag <i class="fa-solid fa-bag-shopping text-black"></i></strong></p>
+        <div class="bag-notification-wrapper">
+            {% for item in bag_items %}
+            <div class="row">
+                <div class="col-4 my-1">
+                    <img src="{{ item.product.image.url }}" alt="{{ item.product.name}}" class="w-100">
+                </div>
+                <div class="col-8">
+                    <p class="my-0">{{ item.product.name}}</p>
+                    <p class="my-0 text-muted">{{ item.quantity}}</p>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="row">
+                <div class="col">
+                    <p><strong>Grand Total: €{{ grand_total|floatformat:2}}</strong></p>
+                    <div class="card align-items-center">
+                        <div class="card-body bg-purple text-center btn-block">
+                            <a href="{% url 'view_bag' %}" class="text-white ">Go to Bag</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
     </div>
 </div>
