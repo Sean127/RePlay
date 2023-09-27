@@ -39,11 +39,11 @@ body {
     color: white;
 }
 
-.red-minus{
+.red-minus {
     color: #d61f1f;
 }
 
-.green-plus{
+.green-plus {
     color: #22cc00;
 }
 
@@ -62,12 +62,12 @@ body {
     padding-left: 5px;
 }
 
-.button{
+.button {
     border-radius: 4px;
-    
+
 }
 
-.text-center{
+.text-center {
     text-align: center;
 }
 
@@ -93,12 +93,12 @@ body {
     margin-right: 1rem;
 }
 
-.top-padding{
+.top-padding {
     padding-top: 1.5rem;
 }
 
 .update-link,
-.remove-item{
+.remove-item {
     cursor: pointer;
 }
 
@@ -112,3 +112,16 @@ body {
     align-items: center;
 }
 
+.message-container {
+    position: fixed;
+    top: 64px;
+    right: 15px;
+    z-index:99999;
+}
+.custom-toast{
+    overflow: visible;
+}
+
+.toast-capper{
+    height: 2px;
+}
