@@ -42,6 +42,14 @@ body {
     color: white;
 }
 
+.red-minus{
+    color: #d61f1f;
+}
+
+.green-plus{
+    color: #22cc00;
+}
+
 .header-left {
     display: flex;
     flex-direction: row;
@@ -85,6 +93,11 @@ body {
 
 .top-padding{
     padding-top: 1.5rem;
+}
+
+.update-link,
+.remove-item{
+    cursor: pointer;
 }
 
 .footer {
