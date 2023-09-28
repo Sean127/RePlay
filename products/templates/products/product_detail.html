@@ -49,11 +49,17 @@
                                         min="1" max="4" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                 </div>
                             </div>
+                            {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                                <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                            </small>
+                            {% endif %}
 
                             <div class="col-12">
-                                <input type="submit" class="button bg-purple text-white mt-5"
-                                    value="Add To Bag">
-                                <a href="{% url 'products' %}" class="button button-border text-purple mt-5">Keep Shopping</a>
+                                <input type="submit" class="button bg-purple text-white mt-5" value="Add To Bag">
+                                <a href="{% url 'products' %}" class="button button-border text-purple mt-5">Keep
+                                    Shopping</a>
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
