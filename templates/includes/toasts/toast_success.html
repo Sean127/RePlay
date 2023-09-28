@@ -12,8 +12,8 @@
                 {{ message }}
                 <hr class="mt-1 mb-3">
             </div>
-        </div>
-        {% if grand_total %}
+        </div> 
+        {% if grand_total and not on_profile_page%}
         <p><strong>Your Bag <i class="fa-solid fa-bag-shopping text-black"></i></strong></p>
         <div class="bag-notification-wrapper">
             {% for item in bag_items %}
