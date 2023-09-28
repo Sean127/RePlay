@@ -28,8 +28,8 @@ SECRET_KEY = 'django-insecure-*-rb(h=3z0!(yd5)z3kg02-@+e*-rpe50khgr)v1c95yel92mx
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-sean127-replay-2y08nv4l9py.ws-eu105.gitpod.io'
-    'https://sean-replay-46979beec77a.herokuapp.com/'
+    '8000-sean127-replay-2y08nv4l9py.ws-eu105.gitpod.io',
+    'sean-replay-46979beec77a.herokuapp.com'
     ]
 
 
